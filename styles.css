@@ -277,3 +277,166 @@ div[align="center"] a {
     width: 100% !important;
   }
 }
+
+
+/* Standalone syllabus pages */
+.syllabus {
+  width: min(1040px, calc(100% - 32px));
+  margin: 32px auto;
+  padding: clamp(24px, 5vw, 56px);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.syllabus h1 {
+  margin-bottom: 2rem;
+  color: var(--accent-dark);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.syllabus h2 {
+  margin-top: 2.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid #d8c7a3;
+  color: #402a16;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+}
+
+.syllabus section:first-of-type h2 {
+  margin-top: 0;
+}
+
+.syllabus p,
+.syllabus li,
+.syllabus dd {
+  max-width: 82ch;
+}
+
+.syllabus ul {
+  margin: 0 0 1.5rem;
+  padding-left: 1.35rem;
+}
+
+.syllabus li + li {
+  margin-top: 0.55rem;
+}
+
+.reading-list {
+  display: grid;
+  grid-template-columns: minmax(5rem, max-content) minmax(0, 1fr);
+  gap: 0.65rem 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.reading-list dt {
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.reading-list dd {
+  margin: 0;
+}
+
+.table-key,
+.table-footnote {
+  color: var(--muted);
+}
+
+.table-key {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.table-footnote {
+  margin-top: -0.75rem;
+  font-size: 0.9rem;
+}
+
+.syllabus-table-wrap {
+  max-width: 100%;
+  margin: 0 0 1.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.syllabus-table {
+  width: 100%;
+  min-width: 720px;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.syllabus-table--four-column {
+  min-width: 900px;
+}
+
+.syllabus-table th,
+.syllabus-table td {
+  padding: 12px 14px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.syllabus-table th:last-child,
+.syllabus-table td:last-child {
+  border-right: 0;
+}
+
+.syllabus-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.syllabus-table thead {
+  background: #f2e8d5;
+}
+
+.syllabus-table th {
+  color: #402a16;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.syllabus-table td {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.syllabus-table tbody tr:nth-child(even) {
+  background: #fbf8f1;
+}
+
+.syllabus-table tbody tr:hover {
+  background: #f7efdF;
+}
+
+.topic-note {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+@media (max-width: 600px) {
+  .syllabus {
+    width: 100%;
+    margin: 0;
+    padding: 22px 18px 32px;
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .reading-list {
+    display: block;
+  }
+
+  .reading-list dt {
+    margin-top: 0.9rem;
+  }
+}
